@@ -37,4 +37,4 @@ $ npm run offline
 >```
 
 ## Issues
-In case of any problem in the assignment open an issue here at https://github.com/navneetlal/painless-aws-boilerplate/issues
+In case of any problem in the boilerplate open an issue here at https://github.com/navneetlal/painless-aws-boilerplate/issues
