@@ -1,0 +1,22 @@
+package:
+  exclude:
+    - '**/*'
+  include:
+    - node_modules/**
+    - dist/utils/**
+    - dist/first-service/**
+
+service: first-service
+
+functions:
+  first-service:
+      handler: dist/first-service/first-main.handler
+      name:  ${self:service}-${opt:stage}
+      environment:
+        BUCKET_NAME: ${self:custom.env.BUCKET_NAME}
+        BUCKET_REGION: ${self:custom.env.BUCKET_REGION}
+      events:
+        - http:
+            method: get
+            path: details
+            cors: true

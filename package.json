@@ -1,0 +1,39 @@
+{
+  "name": "aws-serverless",
+  "version": "1.0.0",
+  "description": "Boilerplate for aws lambda and other aws resources",
+  "main": "handler.js",
+  "scripts": {
+    "watch": "tsc -w",
+    "start": "serverless offline start --stage dev",
+    "offline": "nodemon dist/offline-serverless.js"
+  },
+  "author": "Navneet Lal Gupta <navneetlalg@gmail.com> (https://medium.com/@navneetlalg)",
+  "license": "MIT",
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.45",
+    "@types/node": "^13.7.7",
+    "aws-sdk": "^2.630.0"
+  },
+  "devDependencies": {
+    "@types/http-proxy": "^1.17.3",
+    "http-proxy": "^1.18.0",
+    "nodemon": "^2.0.2",
+    "serverless": "^1.65.0",
+    "serverless-offline": "^5.12.1",
+    "typescript": "^3.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navneetlal/painless-aws-boilerplate.git"
+  },
+  "keywords": [
+    "AWS",
+    "Lambda",
+    "serverless"
+  ],
+  "bugs": {
+    "url": "https://github.com/navneetlal/painless-aws-boilerplate/issues"
+  },
+  "homepage": "https://github.com/navneetlal/painless-aws-boilerplate#readme"
+}

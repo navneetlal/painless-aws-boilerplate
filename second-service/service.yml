@@ -1,0 +1,27 @@
+package:
+  exclude:
+    - '**/*'
+  include:
+    - node_modules/**
+    - dist/utils/**
+    - dist/second-service/**
+
+service: second-service
+
+functions:
+  second-service:
+    handler: dist/second-service/second-main.handler
+    name:  ${self:service}-${opt:stage}
+    environment:
+      user_pool_id: ${self:custom.config.user_pool_id}
+      BUCKET_NAME: ${self:custom.env.BUCKET_NAME}
+      BUCKET_REGION: ${self:custom.env.BUCKET_REGION}
+    events:
+      - http:
+          method: get
+          path: actions
+          cors: true
+          # Example authorization with a user pool
+          authorizer:
+            name: vinyl-authorizer
+            arn:  ${self:custom.config.userpool_authorizer_arn}
