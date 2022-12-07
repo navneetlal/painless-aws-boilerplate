@@ -19,7 +19,7 @@
     "@types/http-proxy": "^1.17.3",
     "http-proxy": "^1.18.1",
     "nodemon": "^2.0.2",
-    "serverless": "^1.65.0",
+    "serverless": "^3.25.1",
     "serverless-offline": "^5.12.1",
     "typescript": "^3.8.3"
   },
